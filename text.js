@@ -1,7 +1,7 @@
 let humanScore = 0;
 let compScore = 0;
 
-function getCompRandom () {
+function getCompChoice () {
     let n = Math.floor(Math.random() * 3)
         if (n === 1) {
         return ("rock");
@@ -40,8 +40,21 @@ function playRound(humanChoice, compChoice) {
         console.log("It's a tie!")
 }
 }
-const X = getHumanChoice();
-const Y = getCompRandom();
 
-playRound(X, Y);
-  
+function playGame() {
+        for (let i = 0; i<5; i++) {
+            const computer = getCompChoice();
+            const human = getHumanChoice();
+            playRound(computer, human);
+        }
+        if (humanScore > compScore) {
+            console.log("You won the game!");
+        } else if (humanScore < compScore) {
+            console.log("You lost the game!");
+        } else {
+            console.log("The game is a draw!");
+        }
+        console.log("Your score: " + humanScore + ". Comuters score: " + compScore + ".");
+    }
+
+  playGame();
