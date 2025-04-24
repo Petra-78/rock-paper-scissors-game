@@ -40,9 +40,8 @@ function playRound(humanChoice, compChoice) {
         console.log("It's a tie!")
 }
 }
-  
-  const humanSelection = getHumanChoice();
-  const computerSelection = getCompRandom();
-  
-  playRound(humanSelection, computerSelection);
+const X = getHumanChoice();
+const Y = getCompRandom();
+
+playRound(X, Y);
   
