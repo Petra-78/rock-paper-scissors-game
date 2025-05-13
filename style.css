@@ -64,7 +64,7 @@ h1 {
 }
 
 .choice1, .choice2 {
-    height: 20vh;
+    width: 150px;
 }
 
 .score-human, .score-comp {
@@ -146,6 +146,7 @@ h1 {
     }
     .choice1, .choice2 {
         width: 100%;
+        max-width: 150px;
         height: auto;
      }
      .players {
