@@ -12,34 +12,39 @@ function getCompChoice () {
     }
 }
 
-function getHumanChoice() {
 
-
-}
-
-
+const roundsTitle = document.querySelector(".rounds-title");
+const roundsPara = document.querySelector(".rounds-para");
 
 function playRound(humanChoice, compChoice) {
     
     if (humanChoice.toLowerCase() === "rock" && compChoice === "paper") {
-        console.log("You lost! Paper beats rock.")
+        roundsTitle.textContent = ("You lost!");
+        roundsPara.textContent = ("Paper beats rock.");
+        compScore++
 }   else if (humanChoice.toLowerCase() === "rock" && compChoice === "scissors") {
-        console.log("Congrats, you won!")
+        roundsTitle.textContent = ("You won!");
+        roundsPara.textContent = ("Rock beats scissors.");
         humanScore++ 
 }   else if (humanChoice.toLowerCase() === "paper" && compChoice === "rock") {
-        console.log("Congrats, you won!")
+        roundsTitle.textContent = ("You won!");
+        roundsPara.textContent = ("Paper beats rock.")
         humanScore++ 
 }   else if (humanChoice.toLowerCase() === "paper" && compChoice === "scissors") {
-        console.log("You lost! Scissors beats paper.")
+        roundsTitle.textContent = ("You lost!");
+        roundsPara.textContent = ("Scissors beats paper.");
         compScore++ 
 }   else if (humanChoice.toLowerCase() === "scissors" && compChoice === "paper") {
-        console.log("Congrats, you won!")
+        roundsTitle.textContent = ("You won!");
+        roundsPara.textContent = ("Scissors beats paper.");
         humanScore++
 }   else if (humanChoice.toLowerCase() === "scissors" && compChoice === "rock") {
-        console.log("You lost! Rock beats scissors.")
+        roundsTitle.textContent = ("You lost!");
+        roundsPara.textContent = ("Rock beats scissors.")
         compScore++
 }   else if (humanChoice.toLowerCase() === compChoice) {
-        console.log("It's a tie!")
+        roundsTitle.textContent = ("It's a tie!");
+        roundsPara.textContent = (" ");
 }
 }
 
@@ -47,16 +52,26 @@ const rockButton = document.querySelector("#rock");
 const paperButton = document.querySelector("#paper");
 const scissorsButton = document.querySelector("#scissors");
 
-const computer = getCompChoice();
+const player1Pic = document.querySelector(".choice1");
+const player2Pic = document.querySelector(".choice2");
 
 rockButton.addEventListener("click", function() {
+    const computer = getCompChoice();
     playRound("rock", computer);
+    player1Pic.src = "./images/rock.png";
+    player2Pic.src = "./images/" + computer + ".png";
 });
 paperButton.addEventListener("click", function() {
+    const computer = getCompChoice();
     playRound("paper", computer);
+    player1Pic.src = "./images/paper.png";
+    player2Pic.src = "./images/" + computer + ".png";
 });
 scissorsButton.addEventListener("click", function() {
+    const computer = getCompChoice();
     playRound("scissors", computer);
+    player1Pic.src = "./images/scissors.png";
+    player2Pic.src = "./images/" + computer + ".png";
 });
 
 
