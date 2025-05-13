@@ -1,6 +1,11 @@
 let humanScore = 0;
 let compScore = 0;
 
+let humanSc = document.querySelector(".score-human");
+let compSc = document.querySelector(".score-comp");
+const roundsTitle = document.querySelector(".rounds-title");
+const roundsPara = document.querySelector(".rounds-para");
+
 function getCompChoice () {
     let n = Math.floor(Math.random() * 3)
         if (n === 1) {
@@ -12,36 +17,32 @@ function getCompChoice () {
     }
 }
 
-
-const roundsTitle = document.querySelector(".rounds-title");
-const roundsPara = document.querySelector(".rounds-para");
-
 function playRound(humanChoice, compChoice) {
     
     if (humanChoice.toLowerCase() === "rock" && compChoice === "paper") {
         roundsTitle.textContent = ("You lost!");
         roundsPara.textContent = ("Paper beats rock.");
-        compScore++
+        compSc.textContent = ("score: " + ++compScore);
 }   else if (humanChoice.toLowerCase() === "rock" && compChoice === "scissors") {
         roundsTitle.textContent = ("You won!");
         roundsPara.textContent = ("Rock beats scissors.");
-        humanScore++ 
+        humanSc.textContent = ("score: " + ++humanScore);
 }   else if (humanChoice.toLowerCase() === "paper" && compChoice === "rock") {
         roundsTitle.textContent = ("You won!");
-        roundsPara.textContent = ("Paper beats rock.")
-        humanScore++ 
+        roundsPara.textContent = ("Paper beats rock.");
+        humanSc.textContent = ("score: " + ++humanScore);
 }   else if (humanChoice.toLowerCase() === "paper" && compChoice === "scissors") {
         roundsTitle.textContent = ("You lost!");
         roundsPara.textContent = ("Scissors beats paper.");
-        compScore++ 
+        compSc.textContent = ("score: " + ++compScore);
 }   else if (humanChoice.toLowerCase() === "scissors" && compChoice === "paper") {
         roundsTitle.textContent = ("You won!");
         roundsPara.textContent = ("Scissors beats paper.");
-        humanScore++
+        humanSc.textContent = ("score :" + ++humanScore);
 }   else if (humanChoice.toLowerCase() === "scissors" && compChoice === "rock") {
         roundsTitle.textContent = ("You lost!");
-        roundsPara.textContent = ("Rock beats scissors.")
-        compScore++
+        roundsPara.textContent = ("Rock beats scissors.");
+        compSc.textContent = ("score: " + ++compScore);
 }   else if (humanChoice.toLowerCase() === compChoice) {
         roundsTitle.textContent = ("It's a tie!");
         roundsPara.textContent = (" ");
@@ -73,6 +74,9 @@ scissorsButton.addEventListener("click", function() {
     player1Pic.src = "./images/scissors.png";
     player2Pic.src = "./images/" + computer + ".png";
 });
+
+
+
 
 
 // function playGame() {
