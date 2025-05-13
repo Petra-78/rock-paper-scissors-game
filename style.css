@@ -171,4 +171,7 @@ h1 {
         gap: 5%;
         padding: 10px 10px;
     }
+    .popup-inner {
+        width: 80%;
+    }
 }
