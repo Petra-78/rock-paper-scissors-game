@@ -21,8 +21,7 @@ function getCompChoice () {
     }
 }
 
-function playRound(humanChoice, compChoice) {
-
+function checkWinner() {
     if (humanScore === 5) {
         popupText.textContent = "You won the game!";
         popup.style.display = "flex";
@@ -30,8 +29,10 @@ function playRound(humanChoice, compChoice) {
         popupText.textContent = "You lost the game!";
         popup.style.display = "flex";
 }
-    
-    else if (humanChoice.toLowerCase() === "rock" && compChoice === "paper") {
+}
+
+function playRound(humanChoice, compChoice) {
+    if (humanChoice.toLowerCase() === "rock" && compChoice === "paper") {
         roundsTitle.textContent = ("You lost!");
         roundsPara.textContent = ("Paper beats rock.");
         compSc.textContent = ("score: " + ++compScore);
@@ -59,6 +60,8 @@ function playRound(humanChoice, compChoice) {
         roundsTitle.textContent = ("It's a tie!");
         roundsPara.textContent = (" ");
 }   
+
+    checkWinner();
 }
 
 const rockButton = document.querySelector("#rock");
