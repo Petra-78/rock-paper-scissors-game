@@ -1,0 +1,173 @@
+body {
+    background-color: #c0ccf1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;;
+    margin: 0;
+}
+
+div {
+    display: flex;
+}
+
+.title {
+    background-color: #eeb7e0;
+    border-top: rgb(35, 35, 41) solid 4px;
+    border-bottom: rgb(35, 35, 41) solid 4px;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    padding: 10px 0px;
+    text-align: center;
+}
+
+.text {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0px;
+}
+
+.rounds-title {
+    font-size: 2rem;
+    padding: 20px 0px;
+    margin: 0px;
+    text-align: center;
+    padding: 5px 10px;
+}
+
+.rounds-para {
+    font-size: 1.2rem;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+}
+
+.players {
+    flex-direction: row;
+    gap: 20%;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px;
+
+}
+
+.player1, .player2 {
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.choice1, .choice2 {
+    height: 20vh;
+}
+
+.score-human, .score-comp {
+    background-color: #eeb7e0;
+    padding: 4px 15px;
+    border-radius: 5px;
+    border: rgb(35, 35, 41) solid 2px;
+    font-size: 1.2rem;
+}
+
+.buttons {
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 0px 20px;
+    gap: 10%;
+}
+
+.rps {
+    background-color: #eeb7e0;
+    border: none;
+    width: 170px;
+    border-radius: 5%;
+    border: rgb(35, 35, 41) solid 3px;
+}
+
+.rps-pics {
+    width: 100%;
+    height: 100%;
+}
+
+.popup {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    z-index: 999;
+    left: 0; top: 0;
+    width: 100vw; height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-inner {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #c0ccf1;
+    height: 300px;
+    width: 400px;
+    border-radius: 8px;
+    border: rgb(35, 35, 41) solid 3px;
+}
+
+.popup-text {
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+}
+
+.close-btn {
+    background: #eeb7e0;
+    border: rgb(35, 35, 41) solid 3px;
+    border-radius: 8px;
+    padding: 20px 40px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    h1 {
+        font-size: 2rem;
+        padding: 10px;
+    }
+    .rps {
+        width: 100%;
+        border: rgb(35, 35, 41) solid 2px;
+    }
+    .choice1, .choice2 {
+        width: 100%;
+        height: auto;
+     }
+     .players {
+        gap: 5%;
+        padding: 0px 10px;
+     }
+
+}
+
+@media (max-width: 375px) {
+    h1 {
+     font-size: 1.6rem;
+     padding: 20px 10px;
+    }
+    .rounds-title {
+        font-size: 1.6rem;
+    }
+    .rounds-para {
+        font-size: 1.2rem;
+    }
+    .buttons {
+        gap: 5%;
+        padding: 10px 10px;
+    }
+}
