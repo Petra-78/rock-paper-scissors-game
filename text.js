@@ -50,7 +50,7 @@ function playRound(humanChoice, compChoice) {
 }   else if (humanChoice.toLowerCase() === "scissors" && compChoice === "paper") {
         roundsTitle.textContent = ("You won!");
         roundsPara.textContent = ("Scissors beats paper.");
-        humanSc.textContent = ("score :" + ++humanScore);
+        humanSc.textContent = ("score: " + ++humanScore);
 }   else if (humanChoice.toLowerCase() === "scissors" && compChoice === "rock") {
         roundsTitle.textContent = ("You lost!");
         roundsPara.textContent = ("Rock beats scissors.");
@@ -60,8 +60,6 @@ function playRound(humanChoice, compChoice) {
         roundsPara.textContent = (" ");
 }   
 }
-
-
 
 const rockButton = document.querySelector("#rock");
 const paperButton = document.querySelector("#paper");
@@ -95,7 +93,7 @@ const closeBtn = document.querySelector(".close-btn");
 closeBtn.addEventListener("click", function() {
     popup.style.display = "none";
     roundsTitle.textContent = "Choose your weapon!";
-    roundsPara.textContent = "You have 5 rounds to win the game.";
+    roundsPara.textContent = "Collect 5 points to win the game.";
     player1Pic.src = "./images/questionmark.png";
     player2Pic.src = "./images/questionmark.png";
     humanSc.textContent = "score: 0";
@@ -103,24 +101,3 @@ closeBtn.addEventListener("click", function() {
     humanScore = 0;
     compScore = 0;
 })
-
-
-
-
-// function playGame() {
-//         for (let i = 0; i<5; i++) {
-//             const computer = getCompChoice();
-//             const human = getHumanChoice();
-//             playRound(computer, human);
-//         }
-//         if (humanScore > compScore) {
-//             console.log("You won the game!");
-//         } else if (humanScore < compScore) {
-//             console.log("You lost the game!");
-//         } else {
-//             console.log("The game is a draw!");
-//         }
-//         console.log("Your score: " + humanScore + ". Comuters score: " + compScore + ".");
-//     }
-
-//  playGame();
