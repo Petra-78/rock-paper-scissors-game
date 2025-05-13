@@ -13,9 +13,11 @@ function getCompChoice () {
 }
 
 function getHumanChoice() {
-    let guess = prompt("Write your guess");
-    return guess;
+
+
 }
+
+
 
 function playRound(humanChoice, compChoice) {
     
@@ -41,20 +43,37 @@ function playRound(humanChoice, compChoice) {
 }
 }
 
-function playGame() {
-        for (let i = 0; i<5; i++) {
-            const computer = getCompChoice();
-            const human = getHumanChoice();
-            playRound(computer, human);
-        }
-        if (humanScore > compScore) {
-            console.log("You won the game!");
-        } else if (humanScore < compScore) {
-            console.log("You lost the game!");
-        } else {
-            console.log("The game is a draw!");
-        }
-        console.log("Your score: " + humanScore + ". Comuters score: " + compScore + ".");
-    }
+const rockButton = document.querySelector("#rock");
+const paperButton = document.querySelector("#paper");
+const scissorsButton = document.querySelector("#scissors");
 
-  playGame();
+const computer = getCompChoice();
+
+rockButton.addEventListener("click", function() {
+    playRound("rock", computer);
+});
+paperButton.addEventListener("click", function() {
+    playRound("paper", computer);
+});
+scissorsButton.addEventListener("click", function() {
+    playRound("scissors", computer);
+});
+
+
+// function playGame() {
+//         for (let i = 0; i<5; i++) {
+//             const computer = getCompChoice();
+//             const human = getHumanChoice();
+//             playRound(computer, human);
+//         }
+//         if (humanScore > compScore) {
+//             console.log("You won the game!");
+//         } else if (humanScore < compScore) {
+//             console.log("You lost the game!");
+//         } else {
+//             console.log("The game is a draw!");
+//         }
+//         console.log("Your score: " + humanScore + ". Comuters score: " + compScore + ".");
+//     }
+
+//  playGame();
