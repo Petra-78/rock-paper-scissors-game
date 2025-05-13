@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+    </style>
     <title>Rock paper scissors game</title>
 </head>
 <body>
@@ -10,32 +14,40 @@
         <h1>ROCK PAPER SCISSORS</h1>
     </div>
     <div class="text">
-        <h2>Choose your weapon!</h2>
+        <h2 class="rounds-declare">Choose your weapon!</h2>
         <p>You have 5 rounds to win the game.</p>
     </div>
     <div class="players">
-        <div class="player1">
+        <div class="player">
             <h2 class="player1-title"> Player</h2>
-            <img src="" alt="">
+            <img class="choice" src="./images/questionmark.png" alt="questionmark icon">
             <p class="score">score: 0</p>
         </div>
-        <div class="player2">
+        <div class="player">
             <h2 class="player1-title"> Computer</h2>
-            <img src="" alt="">
+            <img class="choice" src="./images/questionmark.png" alt="questionmark icon">
             <p class="score">score: 0</p>
-        </div>
-        <div class="buttons">
-            <div class="rock">
-                <button id="rock"><img src="./images/rock.png" alt="rock cartoon"></button>
-            </div>
-            <div class="paper">
-                <button id="paper"><img src="./images/paper.png" alt="paper cartoon"></button>
-            </div>
-            <div class="scissors">
-                <button id="scissors"><img src="./images/scissors.png" alt="scissors cartoon"></button>
-            </div>
         </div>
     </div>
+        <div class="buttons">
+            <div class="rock">
+                <button type="button" class="rps" id="rock">
+                    <img class="rps-pics" src="./images/rock.png" alt="rock cartoon">
+                </button>
+            </div>
+            <div class="paper">
+                <button class="rps" id="paper">
+                    <img class="rps-pics"  src="./images/paper.png" alt="paper cartoon">
+                </button>
+            </div>
+            <div class="scissors">
+                <button class="rps" id="scissors">
+                    <img class="rps-pics"  src="./images/scissors.png" alt="scissors cartoon">
+                </button>
+            </div>
+        </div>
+ 
+
 
 
 
