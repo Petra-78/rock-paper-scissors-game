@@ -89,6 +89,7 @@ h1 {
     width: 170px;
     border-radius: 5%;
     border: rgb(35, 35, 41) solid 3px;
+    cursor: pointer;
 }
 
 .rps-pics {
